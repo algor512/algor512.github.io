@@ -1,106 +1,337 @@
-labels:
-    work: Опыт работы
-    projects: Публикации
+<!DOCTYPE html>
+<html lang="ru">
 
-profile:
-    name: Алексей Горелов
-    label: Математик / программист
-    email: algor512@gmail.com
-    phone: "+7 926 264 34 63"
-    birth: "22.08.1993"
-    address: "Москва, Россия" 
-    summary: >
-        Интересные и разнообразные задачи, challenge, возможность изучать
-        что-то новое и видеть пользу от своей работы.
-        В идеале хотелось бы иметь возможность публиковать часть
-        представляющих научный интерес рабочих результатов.
-        Я рассчитываю на з/п от 85000 р.
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Алексей Горелов</title>
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans"
+        rel="stylesheet">
+  <style>
+    body {
+      font-family: "Droid Sans", sans-serif;
+    }
 
-    networks:
-        -   provider: ВКонтакте 
-            username: "Алексей Горелов"
-            url: https://vk.com/id4210301
+    h3 {
+      margin-top: 0.5em;
+    }
 
-        -   provider: Facebook
-            username: "Алексей Горелов"
-            url: https://www.facebook.com/profile.php?id=1654305603
+    h4 {
+      margin-top: 1.1em;
+    }
 
-        -   provider: Github
-            username: "algor512"
-            url: https://github.com/algor512
+    .footer,
+    section {
+      border-top: 1px solid #eee;
+      padding: 1em 0;
+    }
 
-skills:
-    -   area: Языки программирования
-        skills:
-            - Python
-            - C, в меньшей степени C++
-            - Java
-            - SQL, Matlab/Octave (upper-intermediate)
-            - "Intermediate: Bash, R, C#"
+    section p {
+      margin: 0.8em 0 0.4em 0;
+    }
 
-    -   area: Технологии
-        skills:
-            - Pandas, NumPy, SciPy, Scikit-learn
-            - Apache Hadoop
-            - Graphite, Grafana
-            - GNU/Linux (больше 10 лет использования)
-            - Git, SVN
+    section p.sticky {
+      margin: 0;
+    }
 
-    -   area: Языки 
-        skills:
-            - Русский, native
-            - Английский, upper-intermediate 
-            - Французский, pre-intermediate 
+    section ul {
+      margin-top: 1em;
+    }
 
-work:
-    -   company: Mail.Ru Group 
-        role: Аналитик Поиска, data scientist
-        website: https://mail.ru/
-        date: Сентябрь 2015 - настоящее время
-        highlights:
-            - Мониторинг текущих метрик Поиска и сопутствующих продуктов,
-              анализ причин их изменения
-            - Аналитическая поддержка экспериментов
-            - "Проведение полноценных исследований (всех этапов: от сбора
-              данных до интерпретации результатов)"
-            - Автоматизация расчёта метрик, их визуализация
+    img.photo {
+      width: 100px;
+      height: auto;
+      margin: 20px 0;
+    }
 
-projects:
-    -   name: "Восстановление зерновых вершин графа, полученного поиском в
-      ширину"
-        role: А.А. Горелов
-        summary: Конференция
-        website: "http://smu.cmc.msu.ru/sites/default/files/attachments/Abstracts-Lomonosov-2013.pdf"
-        date: 2013
+    .contacts dt {
+      width: 60px;
+      text-align: left
+    }
 
-    -   name: "Анализ задержек в коммуникационной среде вычислительного кластера"
-        role: А.А. Горелов (научный руководитель А.И. Майсурадзе)
-        summary: Дипломная работа
-        website: http://www.machinelearning.ru/
-        date: 2015
+    .contacts dd {
+      margin-left: 65px;
+    }
 
-    -   name: "Анализ структуры задержек передачи информации в вычислительном кластере"
-        role: А.А. Горелов, А.И. Майсурадзе, А.Н. Сальников
-        summary: Конференция
-        website: http://russianscdays.org
-        date: 2015
+    .item {
+      border-bottom: 1px solid #eee;
+    }
 
-education:
-    -   location: Московский государственный университет им. М.В. Ломоносова
-        date: 2010 - 2015
-        summary: >
-            Факультет вычислительной математики и кибернетики, 
-            кафедра математических методов прогнозирования
-    -   location: Creative Writing School
-        date: 8 октября 2015 - 11 декабря 2015
-        summary: Мастерская поэзии
+    .item:last-child {
+      border-bottom: none;
+    }
 
+    header.main h3 {
+      margin-top: 0.3em;
+      margin-bottom: 2em;
+    }
+  </style>
+</head>
 
-interests:
-    - Математика (как прикладная, так и фундаментальная)
-    - Литература
-    - Философия
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <header class="main row">
+          <div class="header">
+            <div class="col-sm-12 col-md-12 text-center">
+              <h1>Алексей Горелов</h1>
+              <h3>Математик / программист</h3>
+            </div>
+          </div>
 
+          <div class="">
+            <div class="col-md-6 col-sm-12">
+              <dl class="contacts dl-horizontal">
 
-config:
-    theme: simple
+                <dt>Адрес:</dt>
+                <dd>Москва, Россия</dd>
+
+                <dt>Тел.:</dt>
+                <dd>+7 926 264 34 63</dd>
+
+                <dt>Email:</dt>
+                <dd>
+                  <a href="mailto:algor512@gmail.com">
+                        algor512@gmail.com
+                    </a>
+                </dd>
+              </dl>
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+              <ul class="networks list-inline text-right">
+                
+                <li>
+                  <a href="https://vk.com/id4210301">
+                            Алексей Горелов @ ВКонтакте
+                        </a>
+                </li>
+                
+                <li>
+                  <a href="https://www.facebook.com/profile.php?id=1654305603">
+                            Алексей Горелов @ Facebook
+                        </a>
+                </li>
+                
+                <li>
+                  <a href="https://github.com/algor512">
+                            algor512 @ Github
+                        </a>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+        </header>
+
+        
+        <section class="row">
+          <header class="col-md-3">
+            <h3>Приоритеты</h3>
+          </header>
+          <div class="col-md-9">
+            <h3></h3> Интересные и разнообразные задачи, challenge, возможность изучать что-то новое и видеть пользу от своей работы. В идеале хотелось бы иметь возможность публиковать часть представляющих научный интерес рабочих результатов. Я рассчитываю на з/п от 85000 р.
+          </div>
+        </section>
+         
+        <section class="row skills">
+          <header class="col-md-3">
+            <h3>Навыки</h3>
+          </header>
+          <div class="col-md-9">
+            <div class="row skills">
+
+              
+              <div class="col-md-6">
+                <h4>Языки программирования</h4>
+                <ul>
+                  
+                  <li>Python</li>
+                  
+                  <li>C, в меньшей степени C++</li>
+                  
+                  <li>Java</li>
+                  
+                  <li>SQL, Matlab/Octave (upper-intermediate)</li>
+                  
+                  <li>Intermediate: Bash, R, C#</li>
+                  
+                </ul>
+              </div>
+              
+              <div class="col-md-6">
+                <h4>Технологии</h4>
+                <ul>
+                  
+                  <li>Pandas, NumPy, SciPy, Scikit-learn</li>
+                  
+                  <li>Apache Hadoop</li>
+                  
+                  <li>Graphite, Grafana</li>
+                  
+                  <li>GNU/Linux (больше 10 лет использования)</li>
+                  
+                  <li>Git, SVN</li>
+                  
+                </ul>
+              </div>
+              
+              <div class="col-md-6">
+                <h4>Языки</h4>
+                <ul>
+                  
+                  <li>Русский, native</li>
+                  
+                  <li>Английский, upper-intermediate</li>
+                  
+                  <li>Французский, pre-intermediate</li>
+                  
+                </ul>
+              </div>
+              
+
+            </div>
+          </div>
+        </section>
+         
+        <section class="row">
+          <header class="col-md-3">
+            <h3>Опыт работы</h3>
+          </header>
+          <div class="col-md-9">
+            
+            <div class="item">
+              <h3>Mail.Ru Group</h3>
+              <strong>Аналитик Поиска, data scientist</strong> 
+              <p class="sticky">Сентябрь 2015 - настоящее время</p>
+               
+              <p class="sticky">
+                <a href="https://mail.ru/">https://mail.ru/</a>
+              </p>
+                
+              <ul>
+                
+                <li>Мониторинг текущих метрик Поиска и сопутствующих продуктов, анализ причин их изменения</li>
+                
+                <li>Аналитическая поддержка экспериментов</li>
+                
+                <li>Проведение полноценных исследований (всех этапов: от сбора данных до интерпретации результатов)</li>
+                
+                <li>Автоматизация расчёта метрик, их визуализация</li>
+                
+              </ul>
+              
+            </div>
+            
+          </div>
+        </section>
+         
+        <section class="row">
+          <header class="col-md-3">
+            <h3>Публикации</h3>
+          </header>
+          <div class="col-md-9">
+            
+            <div class="item">
+              <h4>Восстановление зерновых вершин графа, полученного поиском в ширину</h4> 
+              <strong>А.А. Горелов</strong>
+              <br />  
+              <p class="sticky">2013</p>
+               
+              <p class="sticky">
+                <a href="http://smu.cmc.msu.ru/sites/default/files/attachments/Abstracts-Lomonosov-2013.pdf">http://smu.cmc.msu.ru/sites/default/files/attachments/Abstracts-Lomonosov-2013.pdf</a>
+              </p>
+              
+              <p>Конференция</p>
+
+              
+            </div>
+            
+            <div class="item">
+              <h4>Анализ задержек в коммуникационной среде вычислительного кластера</h4> 
+              <strong>А.А. Горелов (научный руководитель А.И. Майсурадзе)</strong>
+              <br />  
+              <p class="sticky">2015</p>
+               
+              <p class="sticky">
+                <a href="http://www.machinelearning.ru/">http://www.machinelearning.ru/</a>
+              </p>
+              
+              <p>Дипломная работа</p>
+
+              
+            </div>
+            
+            <div class="item">
+              <h4>Анализ структуры задержек передачи информации в вычислительном кластере</h4> 
+              <strong>А.А. Горелов, А.И. Майсурадзе, А.Н. Сальников</strong>
+              <br />  
+              <p class="sticky">2015</p>
+               
+              <p class="sticky">
+                <a href="http://russianscdays.org">http://russianscdays.org</a>
+              </p>
+              
+              <p>Конференция</p>
+
+              
+            </div>
+            
+          </div>
+        </section>
+         
+        <section class="row">
+          <header class="col-md-3">
+            <h3>Образование</h3>
+          </header>
+          <div class="col-md-9">
+
+            
+            <div class="">
+              <h3>Московский государственный университет им. М.В. Ломоносова</h3>
+              <p class="sticky">2010 - 2015</p>
+              <p>Факультет вычислительной математики и кибернетики,  кафедра математических методов прогнозирования
+</p>
+            </div>
+            
+            <div class="">
+              <h3>Creative Writing School</h3>
+              <p class="sticky">8 октября 2015 - 11 декабря 2015</p>
+              <p>Мастерская поэзии</p>
+            </div>
+            
+          </div>
+        </section>
+         
+        <section class="row">
+          <header class="col-md-3">
+            <h3>Интересы</h3>
+          </header>
+          <div class="col-md-9">
+
+            <ul>
+              
+              <li>Математика (как прикладная, так и фундаментальная)</li>
+              
+              <li>Литература</li>
+              
+              <li>Философия</li>
+              
+            </ul>
+          </div>
+        </section>
+        
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</body>
+
+</html>
